@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.Design;
+using System.Data.SqlTypes;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 
@@ -10,84 +13,79 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            if (CharacterIsALetter(c))
+            string lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+            char[] lowerCharArray = lowerAlphabet.ToCharArray();
+            string upperAlphabet = lowerAlphabet.ToUpper();
+            char[] upperCharArray = upperAlphabet.ToCharArray();
+
+            for (int i = 0; i < lowerCharArray.Length; i++)
             {
-                return true;
+                if (lowerCharArray[i] == c)
+                {
+                    return true;
+                }
             }
-            else
+
+            for (int i = 0; i < upperCharArray.Length; i++)
             {
-                return false;
+                if (upperCharArray[i] == c)
+                {
+                    return true;
+                }
             }
+            return false;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            if (vals.Length % 2 == 0)
-                
-            {
-                return true;
-            }
-            else
+            if (vals.Length % 2 != 0)
             {
                 return false;
             }
-        }
-
-        public static void CharacterIsNotALetter(char c)
-        {
-            if (!Char.IsLetter(c));
-            {
-                Console.WriteLine($"The character '{c}' is not a letter.");
+            else
+            {return true;
             }
-            
         }
-
-
+        
         public bool IsNumberEven(int number)
         {
-            if (number % 2 == 0);
-            {
-                return true;
-            }
-            
+            return number % 2 == 0;
         }
-
-        
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers == null || !numbers.Any())
+            if (numbers == null || numbers.Count() == 0)
             {
-                return 0.0;
+                return 0;
             }
 
-            double minValue = double.MaxValue;
-            double maxValue = double.MinValue;
-
-            return minValue + maxValue;
+            return numbers.Min() + numbers.Max();
         }
 
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            return (str1.Length + str2.Length) / 2;
+            if (str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+            else
+            {
+                return str2.Length;
+            }
         }
-
-
+        
+        
         public int Sum(int[] numbers)
         {
-            int sum = 0;
-            foreach (int number in numbers)
+            if (numbers == null)
             {
-                if (number % 2 == 0)
-                {
-                    sum += number;
-                }
+                return 0;
             }
-
-            return sum;
             
+            return numbers.Sum();
         }
+
 
         public int SumEvens(int[] numbers)
         {
@@ -95,43 +93,68 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
-                
-            int sum = 0;
-            foreach (int number in numbers)
-            {   
-                if (number % 2 == 0)
-                {
-                    return sum += number;
-                }
+            //int sum = 0;
+            //foreach (int number in numbers)
+            //{
+                //if (number[i] % 2 == 0)
+                //{
+                    //sum += numbers[i];
+               // }
+          //  }
+
+            return numbers.Where(x => x % 2 == 0).Sum();
+         }
+
+        public bool IsSumOdd(int[] numbers)
+        {
+            if (numbers == null)
+            {
+                return false;
             }
-            return sum;
+
+            //long sum = 0;
+            //foreach (int number in numbers)
+            //{
+             //   sum += number;
+            //}
+
+            return numbers.Sum() % 2 != 0;
         }
 
-        public bool IsNumberOdd(int numbers)
-        {
-            if (numbers % 2 != 0)
-                {
-                    return true;
-                }
-            return false;
-        }   
         
+        public bool IsNumberOdd(int number)
+        {
+            if (number % 2 != 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-                if (number <= 1)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return (number - 1 / 2);
-                }
+            if (number <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return number / 2;
+            }
         }
 
-        public bool IsSumOdd(List<int> number)
+        public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+
+            return numbers.Sum() % 2 != 0;
         }
-        
+
     }
+
 }

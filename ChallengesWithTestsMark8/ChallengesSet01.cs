@@ -46,8 +46,11 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            Console.WriteLine("Hello");
-            return ("Hello!");
+            if (nameOfPerson != "")
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+            return "Hello!";
         }
 
 
