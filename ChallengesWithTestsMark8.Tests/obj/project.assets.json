@@ -6781,7 +6781,7 @@
     "ChallengesWithTestsMark8/1.0.0": {
       "type": "project",
       "path": "../ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
-      "msbuildProject": "../ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
+      "msbuildProject": "../../../Repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6798,11 +6798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/grace/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
+      "projectUniqueName": "/Users/grace/Desktop/Repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
       "projectName": "ChallengesWithTestsMark8.Tests",
-      "projectPath": "/Users/grace/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
+      "projectPath": "/Users/grace/Desktop/Repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
       "packagesPath": "/Users/grace/.nuget/packages/",
-      "outputPath": "/Users/grace/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/obj/",
+      "outputPath": "/Users/grace/Desktop/Repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/grace/.nuget/NuGet/NuGet.Config"
@@ -6817,8 +6817,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/grace/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
-              "projectPath": "/Users/grace/Desktop/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
+            "/Users/grace/Desktop/Repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
+              "projectPath": "/Users/grace/Desktop/Repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
             }
           }
         }
